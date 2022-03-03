@@ -1,13 +1,13 @@
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import ItemAdd from "./ItemAdd";
+import Layout from "./Layout";
 
 function App() {
   return (
     <div className="app-routes">
       <Switch>
-        <Route exact path="/">
-          <ItemAdd />
+        <Route path="/">
+          <Layout />
         </Route>
       </Switch>
     </div>
