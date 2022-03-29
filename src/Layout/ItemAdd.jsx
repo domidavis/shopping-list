@@ -1,45 +1,13 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom"
+import React from "react";
 
-export default function ItemAdd() {
-    const history = useHistory();
-    const today = new Date();
-    const [name, setName] = useState("");
-    const [store, setStore] = useState("");
-    const [quantity, setQuantity] = useState(0);
-    const [dateAdded, setDateAdded] = useState(today);
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setName("");
-        setStore("");
-        setQuantity(0);
-        setDateAdded(today);
-        history.go(0);
-    }
-
-    const handleChange = ({ target }) => {
-        if(target.name === "name") {
-            setName(target.value);
-        }
-        if(target.name === "store") {
-            setStore(target.value);
-        }
-        if(target.name === "quantity") {
-            setQuantity(target.value);
-        }
-        if(target.name === "dateAdded") {
-            setDateAdded(target.value);
-        }
-    }
-    
+export default function ItemAdd({ name, store, quantity, dateAdded, handleSubmit, handleChange }) {
     return (
         <>
             <h3>Add Item</h3>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">
-                        Item Name:
+                        Item name
                     </label>
                     <input
                     id="name"

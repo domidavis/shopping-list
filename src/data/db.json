@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "garlic sauce",
+            "quantity": 6,
+            "store": "Trader Joe's"
+        },
+        {
+            "id": 2,
+            "name": "oat milk",
+            "quantity": 4,
+            "store": "Whole Foods"
+        },
+        {
+            "id": 3,
+            "name": "sourdough loaf",
+            "quantity": 1,
+            "store": "Whole Foods"
+        }
+    ]
+}
